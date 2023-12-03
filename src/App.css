@@ -1,42 +1,11 @@
 #root {
-  /* max-width: 1280px;
-  margin: 0 auto; */
+  max-width: 1000px;
+  /* margin: 0 auto; */
   padding: 2rem;
-  /* min-width: 100%; */
+  min-width: 100%;
   /* text-align: center; */
   /* border: 1px solid black; */
 }
-
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */
 
 .card {
   padding: 2em;
@@ -69,14 +38,6 @@
   /* font-family: 'Slabo', serif; */
   /* background-color: #d0d0d0; */
 }
-
-/* .navbar {
-  display: flex;
-  border: 1px solid red;
-  justify-content: space-between;
-  align-items: center;
-
-} */
 
 .navbar-nav {
   display: flex;
@@ -140,6 +101,6 @@
   /* background-color: red;
   border-radius: 5px;
   padding: 15px; */
-  box-shadow: 2px 2px 2px 2px rgb(227, 227, 227);
+  box-shadow: 2px 2px 2px 3px #f0f0f0;
   /* scale: 1.01; */
 }
