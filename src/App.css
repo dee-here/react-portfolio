@@ -1,9 +1,10 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  /* max-width: 1280px;
+  margin: 0 auto; */
   padding: 2rem;
+  /* min-width: 100%; */
   /* text-align: center; */
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 /* .logo {
@@ -50,15 +51,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom:  50px; 
-  border: 1px solid green;
+  margin-bottom: 50px;
+  /* border: 1px solid green; */
   gap: 20px;
+  padding: 15px;
+  background-color: #e9ecef;
+  border-radius: 5px;
 }
 
 .logo {
   /* border: 1px solid green; */
-  font-size: 120%;
-  background-color: #d0d0d0;
+  font-size: 150%;
+  font-family: 'Junge', cursive;
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: bold;
+  line-height: 125%;
+  /* font-family: 'Slabo', serif; */
+  /* background-color: #d0d0d0; */
 }
 
 /* .navbar {
@@ -73,20 +82,64 @@
   display: flex;
 }
 
-.navbar-nav .nav-link{
- padding-right: 50px;
+.navbar-nav .nav-link {
+  /* margin-right: 50px; */
+  padding: 10px;
+  text-decoration: none;
 }
 
-.navbar-nav .nav-link.active{
-  color: green;
- }
+.navbar-nav .nav-link{
+  /* color: #6c757d; */
+  color: #495057;
+}
 
- .footer {
+.navbar-nav .nav-link.active {
+  color: #212529;
+  text-decoration: underline;
+  scale: 1.1;
+  /* background-color: #f8f9fa; */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #343a40;
+  scale: 1.1;
+}
+
+.footer {
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
   justify-content: center;
-  margin: 25px 0; 
-  border: 1px solid green;
+  margin: 25px 0;
+  /* border: 1px solid green; */
   gap: 50px;
- }
+}
+
+.footer a {
+  /* padding: 15px; */
+  font-size: 300%;
+  color: #495057;
+}
+
+.footer a:hover {
+  /* padding: 15px; */
+  scale: 1.1;
+  color: #343a40;
+  /* box-shadow: 5px 5px 10px 10px #070152c7; */
+}
+
+/* Page styling */
+.page-container {
+ /* background-color: white; */
+  border-radius: 5px;
+  padding: 15px;
+  border: 1px solid rgb(242, 242, 242);
+  /* box-shadow: 5px 5px 5px 5px rgb(232, 232, 232); */
+}
+.page-container:hover {
+  /* background-color: red;
+  border-radius: 5px;
+  padding: 15px; */
+  box-shadow: 2px 2px 2px 2px rgb(227, 227, 227);
+  /* scale: 1.01; */
+}
