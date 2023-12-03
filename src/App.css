@@ -203,7 +203,7 @@
   visibility: visible;
 }
 
-/* projects background */
+/* project tile backgrounds */
 
 .space-jam-x {
   background-image: url("./assets/images/space-jamx-demo.gif");
@@ -224,8 +224,59 @@
   background-image: url("./assets/images/note-taker.gif");
 }
 
+/* Contacts form */
+.contacts-form {
+  max-width: 600px;
+  /* border: 1px solid green; */
+  padding: 10px 0;
+}
+.contacts-form label{
+  /* max-width: 800px;
+  border: 1px solid green; */
+  padding: 10px 0 0 ;
+  display: block;
+}
+.contacts-form input{
+  width: 100%;
+  border: 1px solid #adb5bd;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px 0 15px
+  /* padding: 10px 0; */
+}
+.contacts-form textarea{
+  border: 1px solid #adb5bd;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%
+}
+.contacts-form button{
+  border: 1px solid #adb5bd;
+  border-radius: 5px;
+  padding: 5px 25px;
+  margin: 20px 0;
+}
+.contacts-form button:hover{
+background-color: #f8f9fa;
+scale: 1.1;
+}
 
+/* About me page */
+.profile-pic {
+  width: 200px;
+  height: auto;
+  background-size: cover;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px 3px #c7c7c7;
+  margin: 25px 0;
+}
+.profile-pic:hover {
+  scale: 1.1;
+}
 
+.aboutme-container p {
+  padding: 5px 0;
+}
 /* media queries for responsiveness */
 /* let the projects tile one per row when below 1020px */
 @media (max-width: 1020px) {

@@ -1,27 +1,24 @@
 export default function AboutMePage() {
-    return (
-      <div className="container pt-4">
+  return (
+    <div className="">
+      <p>About me</p>
+      <div className="aboutme-container">
+        <img
+          src="/src/assets/images/dee-profile.jpg"
+          alt="photo"
+          className="profile-pic"
+        ></img>
         <p>
-            ABOUT ME !!!
-            
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          tenetur maiores, dolor iusto dolorum ullam, natus deleniti blanditiis
-          impedit suscipit sed magnam alias in, repellat expedita hic explicabo
-          architecto soluta. About us Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Velit voluptate exercitationem quaerat pariatur
-          mollitia, excepturi, voluptatem eveniet a dolor nobis ex veniam totam
-          nostrum temporibus ad omnis nam rerum eligendi.
+          I am a web developer with an interest in developing meaningful user
+          experiences. My approach to web development is rooted in
+          collaboration. I enjoy working closely with designers, UX, and end
+          users.
         </p>
-        <p> 
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
-          tenetur maiores, dolor iusto dolorum ullam, natus deleniti blanditiis
-          impedit suscipit sed magnam alias in, repellat expedita hic explicabo
-          architecto soluta. About us Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Velit voluptate exercitationem quaerat pariatur
-          mollitia, excepturi, voluptatem eveniet a dolor nobis ex veniam totam
-          nostrum temporibus ad omnis nam rerum eligendi.
+        <p>
+          Outside of work, I enjoy staying active and being in nature. Fostering
+          dogs during the pandemic was one of my most rewarding experiences.
         </p>
       </div>
-    );
-  }
-  
+    </div>
+  );
+}
