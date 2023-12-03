@@ -18,10 +18,10 @@ export default function Nav() {
           <Link key={2} className={currentPage === '/portfolio' ? 'nav-link active' : 'nav-link'} to="/portfolio">
             Portfolio
           </Link>,
-          <Link key={2} className={currentPage === '/resume' ? 'nav-link active' : 'nav-link'} to="/resume">
+          <Link key={3} className={currentPage === '/resume' ? 'nav-link active' : 'nav-link'} to="/resume">
             Resume
           </Link>,
-          <Link key={3} className={currentPage === '/contacts' ? 'nav-link active' : 'nav-link'} to="/contacts">
+          <Link key={4} className={currentPage === '/contacts' ? 'nav-link active' : 'nav-link'} to="/contacts">
             Contact
           </Link>,
         ]}
