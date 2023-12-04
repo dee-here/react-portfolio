@@ -3,7 +3,7 @@ import Project from "../components/Project";
 export default function ProjectPage() {
   return (
     <div className="page-container">
-      <p>Projects Page !!!!</p>
+      <p>Projects</p>
       <div className="project-container">
         <Project
           title={"Space Jam x"}
@@ -27,7 +27,7 @@ export default function ProjectPage() {
           subTitle={"Web API"}
         />
         <Project
-          title={"Just Another Text Edtior"}
+          title={"Just Another Text Editor"}
           backgroundClass={"jate"}
           deployedLink={"https://ds-text-editor-pwa-4262863a72d2.herokuapp.com/"}
           github={"https://github.com/dee-here/text-editor-pwa"}

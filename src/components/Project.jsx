@@ -7,6 +7,7 @@ function Project({ title, deployedLink, github, subTitle, backgroundClass }) {
           href={deployedLink}
           target="_blank"
           rel="noopener noreferrer"
+          title="Deployed Application Link"
         >
           {title}
         </a>
@@ -15,13 +16,12 @@ function Project({ title, deployedLink, github, subTitle, backgroundClass }) {
           href={github}
           target="_blank"
           rel="noopener noreferrer"
+          title="Github Repository"
         >
           <i className="fa-brands fa-square-github"></i>
         </a>
         <div className="project-subtitle">{subTitle}</div>
       </div>
-
-      {/* <div className="project-subtitle">{subTitle}</div> */}
     </div>
   );
 }

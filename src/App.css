@@ -80,6 +80,7 @@
   /* padding: 15px; */
   font-size: 300%;
   color: #495057;
+  margin-top: 25px;
 }
 
 .footer a:hover {
@@ -108,12 +109,11 @@
 
 .project-container {
   display: flex;
-  border: 1px solid #b4b4b4;
-  border-radius: 5px;
-  row-gap: 80px;
-  column-gap: 50px;
+  /* border: 1px solid #b4b4b4;
+  border-radius: 5px; */
+  gap: 100px;
   justify-content: space-around;
-  padding: 10px;
+  padding: 25px 0;
   flex-wrap: wrap;
 }
 
@@ -125,6 +125,7 @@
   min-height: 300px;
   flex: 1;
   flex-basis: 45%;
+  border-radius: 10px;
 
   align-items: flex-start;
   justify-content: flex-end;
@@ -174,14 +175,17 @@
   background-color: #000;
   color: #fff;
   text-decoration: none;
+  font-size: 170%;
 }
+
 .github-link {
   background-color: #343a40;
   background-color: white;
   padding: 10px;
   background-color: #000;
   color: #fff;
-  
+  font-size: 170%;
+
 }
 
 .project-subtitle {
@@ -208,18 +212,23 @@
 .space-jam-x {
   background-image: url("./assets/images/space-jamx-demo.gif");
 }
+
 .majority-matters {
   background-image: url("./assets/images/majority-matters.gif");
 }
+
 .weather-dashboard {
   background-image: url("./assets/images/weather-dash.png");
 }
+
 .jate {
   background-image: url("./assets/images/00-demo.gif");
 }
+
 .workday-planner {
   background-image: url("./assets/images/05-third-party-apis-homework-demo.gif");
 }
+
 .note-taker {
   background-image: url("./assets/images/note-taker.gif");
 }
@@ -230,35 +239,40 @@
   /* border: 1px solid green; */
   padding: 10px 0;
 }
-.contacts-form label{
+
+.contacts-form label {
   /* max-width: 800px;
   border: 1px solid green; */
-  padding: 10px 0 0 ;
+  padding: 10px 0 0;
   display: block;
 }
-.contacts-form input{
+
+.contacts-form input {
   width: 100%;
   border: 1px solid #adb5bd;
   border-radius: 5px;
   padding: 5px;
   margin: 5px 0 15px
-  /* padding: 10px 0; */
+    /* padding: 10px 0; */
 }
-.contacts-form textarea{
+
+.contacts-form textarea {
   border: 1px solid #adb5bd;
   border-radius: 5px;
   padding: 5px;
   width: 100%
 }
-.contacts-form button{
+
+.contacts-form button {
   border: 1px solid #adb5bd;
   border-radius: 5px;
   padding: 5px 25px;
   margin: 20px 0;
 }
-.contacts-form button:hover{
-background-color: #f8f9fa;
-scale: 1.1;
+
+.contacts-form button:hover {
+  background-color: #f8f9fa;
+  scale: 1.1;
 }
 
 /* About me page */
@@ -270,12 +284,46 @@ scale: 1.1;
   box-shadow: 1px 1px 3px 3px #c7c7c7;
   margin: 25px 0;
 }
+
 .profile-pic:hover {
   scale: 1.1;
 }
 
 .aboutme-container p {
   padding: 5px 0;
+}
+
+/* Resume */
+.download-link {
+  color: #495057;
+  display: inline-block;
+  text-decoration: none;
+}
+.download-link i{
+padding: 0 15px;
+font-size: 150%;
+}
+.download-link:hover {
+  scale: 1.1;
+  color: #343a40;
+}
+
+.section {
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  margin: 15px 0;
+  padding: 10px;
+}
+.section .section-header {
+  font-size: 120%;
+  margin: 10px 0
+}
+.section ul {
+  margin-left: 25px;
+}
+
+.section ul li{
+  list-style-type:circle;
 }
 /* media queries for responsiveness */
 /* let the projects tile one per row when below 1020px */
