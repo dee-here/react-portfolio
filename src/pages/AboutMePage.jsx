@@ -4,7 +4,7 @@ export default function AboutMePage() {
       <p>About me</p>
       <div className="aboutme-container">
         <img
-          src="/src/assets/images/dee-profile.jpg"
+          src="/images/dee-profile.jpg"
           alt="photo"
           className="profile-pic"
         ></img>
