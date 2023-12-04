@@ -1,6 +1,6 @@
 export default function AboutMePage() {
   return (
-    <div className="">
+    <div className="page-container">
       <p>About me</p>
       <div className="aboutme-container">
         <img

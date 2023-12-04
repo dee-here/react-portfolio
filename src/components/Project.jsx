@@ -1,6 +1,13 @@
 function Project({ title, deployedLink, github, subTitle, backgroundClass }) {
   return (
-    <div className={backgroundClass ? "project-block " + backgroundClass : "project-block "}>
+    <div className="project-block">
+      <div
+        className={
+          backgroundClass
+            ? "tile-background " + backgroundClass
+            : "tile-background"
+        }
+      ></div>
       <div className="project-links">
         <a
           className="project-title"

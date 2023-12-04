@@ -1,7 +1,7 @@
 export default function ResumePage() {
   return (
     <div className="page-container">
-      Resume
+      <p>Resume</p>
       <div className="section">
         <a
           href="public/resume/Deepak-Sinha-Resume.pdf"

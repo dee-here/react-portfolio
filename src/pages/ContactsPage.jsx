@@ -1,5 +1,5 @@
 import { useState } from "react";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 export default function ContactsPage() {
   const [name, setName] = useState("");
@@ -9,20 +9,29 @@ export default function ContactsPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     //use emailjs to send message
-    emailjs.sendForm('service_j857s32', 'contact_form', e.target, 'PsjyMK4LUivNyeySV')
-    .then((result) => {
-      console.log("Message Sent.",result.text);
-    }, (error) => {
-      console.log(error.text);
-    });
-
-    setName('');
-    setEmail('');
-    setMessage('');
+    emailjs
+      .sendForm(
+        "service_j857s32",
+        "contact_form",
+        e.target,
+        "PsjyMK4LUivNyeySV"
+      )
+      .then(
+        (result) => {
+          console.log("Message Sent.", result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    // clear form fields after sending
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
-    <div className="contacts-page">
+    <div className="contacts-page page-container">
       <p>Contact</p>
       <div className="contacts-form">
         <form onSubmit={handleSubmit}>
@@ -61,4 +70,3 @@ export default function ContactsPage() {
     </div>
   );
 }
-
