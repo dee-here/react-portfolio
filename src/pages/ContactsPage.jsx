@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from 'emailjs-com';
 
 export default function ContactsPage() {
   const [name, setName] = useState("");
@@ -7,7 +8,14 @@ export default function ContactsPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted!");
+    //use emailjs to send message
+    emailjs.sendForm('service_j857s32', 'contact_form', e.target, 'PsjyMK4LUivNyeySV')
+    .then((result) => {
+      console.log("Message Sent.",result.text);
+    }, (error) => {
+      console.log(error.text);
+    });
+
     setName('');
     setEmail('');
     setMessage('');
@@ -22,6 +30,7 @@ export default function ContactsPage() {
           <input
             type="text"
             id="name"
+            name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -31,6 +40,7 @@ export default function ContactsPage() {
           <input
             type="email"
             id="email"
+            name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -39,6 +49,7 @@ export default function ContactsPage() {
           <label htmlFor="message">Message:</label>
           <textarea
             id="message"
+            name="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
