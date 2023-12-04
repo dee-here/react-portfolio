@@ -4,7 +4,7 @@ export default function ResumePage() {
       <p>Resume</p>
       <div className="section">
         <a
-          href="public/resume/Deepak-Sinha-Resume.pdf"
+          href="/resume/Deepak-Sinha-Resume.pdf"
           className="download-link"
           target="_blank"
         >
