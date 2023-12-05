@@ -1,33 +1,61 @@
 import { useState } from "react";
-import emailjs from "emailjs-com";
 
 export default function ContactsPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
+
+  const validateName = () => {
+    let isValid = true;
+    if (name.trim() === "") {
+      setNameError("Name is required");
+      isValid = false;
+    } else {
+      setNameError("");
+    }
+    return isValid;
+  };
+
+  function checkEmail(email) {
+    const regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    return regex.test(email);
+  }
+
+  const validateEmail = () => {
+    let isValid = true;
+    if (!checkEmail(email)) {
+      setEmailError("Enter a valid email address");
+      isValid = false;
+    } else {
+      setEmailError("");
+    }
+    return isValid;
+  };
+
+  const validateMessage = () => {
+    let isValid = true;
+    if (message.trim() === "") {
+      setMessageError("Message is required");
+      isValid = false;
+    } else {
+      setMessageError("");
+    }
+    return isValid;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    //use emailjs to send message
-    emailjs
-      .sendForm(
-        "service_j857s32",
-        "contact_form",
-        e.target,
-        "PsjyMK4LUivNyeySV"
-      )
-      .then(
-        (result) => {
-          console.log("Message Sent.", result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    // clear form fields after sending
-    setName("");
-    setEmail("");
-    setMessage("");
+    // clear form fields only after validating
+    if (validateName() && validateEmail() && validateMessage()) {
+      setName("");
+      setEmail("");
+      setMessage("");
+      console.log("Message sent !");
+    }
   };
 
   return (
@@ -42,8 +70,11 @@ export default function ContactsPage() {
             name="name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            required
+            onBlur={() => validateName()}
           />
+          <div className="error-message">
+            {nameError && <span>{nameError}</span>}
+          </div>
 
           <label htmlFor="email">Email:</label>
           <input
@@ -52,8 +83,11 @@ export default function ContactsPage() {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
+            onBlur={() => validateEmail()}
           />
+          <div className="error-message">
+            {emailError && <span>{emailError}</span>}
+          </div>
 
           <label htmlFor="message">Message:</label>
           <textarea
@@ -61,8 +95,11 @@ export default function ContactsPage() {
             name="message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            required
+            onBlur={() => validateMessage()}
           ></textarea>
+          <div className="error-message">
+            {messageError && <span>{messageError}</span>}
+          </div>
 
           <button type="submit">Submit</button>
         </form>

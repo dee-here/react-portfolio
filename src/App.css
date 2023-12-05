@@ -222,7 +222,7 @@
   border: 1px solid var(--gray-5);
   border-radius: 5px;
   padding: 5px;
-  margin: 5px 0 15px;
+  margin: 5px 0;
 }
 
 .contacts-form textarea {
@@ -237,11 +237,17 @@
   border-radius: 5px;
   padding: 5px 25px;
   margin: 20px 0;
+  width: 100%;
 }
 
 .contacts-form button:hover {
   background-color: #f8f9fa;
-  scale: 1.1;
+}
+
+.error-message {
+  height:20px;
+  font-size: 90%;
+  color: var(--gray-3)
 }
 
 /* About me page */
