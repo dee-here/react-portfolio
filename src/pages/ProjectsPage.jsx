@@ -5,6 +5,13 @@ export default function ProjectPage() {
     <div className="page-container">
       <p>Projects</p>
       <div className="project-container">
+      <Project
+          title={"ReadIt"}
+          backgroundClass={"readit"}
+          deployedLink={"https://project-readit-ae03b3828bf5.herokuapp.com/"}
+          github={"https://github.com/flimits/readit"}
+          subTitle={"MERN"}
+        />
         <Project
           title={"Space Jam x"}
           backgroundClass={"space-jam-x"}

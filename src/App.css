@@ -206,6 +206,10 @@
   background-image: url("/images/note-taker.gif");
 }
 
+.readit {
+  background-image: url("/images/ReadIt.gif");
+}
+
 /* Contacts form */
 .contacts-form {
   max-width: 600px;
