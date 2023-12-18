@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "emailjs-com";
 
 export default function ContactsPage() {
   const [name, setName] = useState("");
@@ -51,6 +52,22 @@ export default function ContactsPage() {
     e.preventDefault();
     // clear form fields only after validating
     if (validateName() && validateEmail() && validateMessage()) {
+      emailjs
+        .sendForm(
+          "service_qabx47h",
+          "contact_form",
+          e.target,
+          "PsjyMK4LUivNyeySV"
+        )
+        .then(
+          (result) => {
+            console.log("Message Sent.", result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+
       setName("");
       setEmail("");
       setMessage("");
