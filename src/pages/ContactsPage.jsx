@@ -78,6 +78,7 @@ export default function ContactsPage() {
   return (
     <div className="contacts-page page-container">
       <p>Contact</p>
+      <p>Use this form to contact me..</p>
       <div className="contacts-form">
         <form onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>
