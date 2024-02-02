@@ -316,3 +316,14 @@
     flex-basis: 95%;
   }
 }
+
+/*  for mobile/smaller screens adjust padding/wrapping */
+@media (max-width: 550px) {
+  #root {
+    padding: 2px;
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+}
